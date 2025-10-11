@@ -1,5 +1,5 @@
 """Unit tests for the Handler classes in the shared framework."""
-from billing_system.shared.handlers import StepHandler
+from plummy.handlers import StepHandler
 
 def test_step_handler_processes_when_can_handle_is_true(
     mock_processor, mock_handler
@@ -79,4 +79,4 @@ def test_step_handler_at_end_of_chain(mock_processor):
     mock_processor.process.assert_called_once_with(test_data)
 
     # Verify that the final result is the data returned by our processor
-    # assert result == processed_data
+    assert result == processed_data

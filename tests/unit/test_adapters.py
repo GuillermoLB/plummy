@@ -1,5 +1,5 @@
 """Unit tests for the adapter classes in the shared framework."""
-from billing_system.shared.adapters import FunctionalProcessor
+from plummy.adapters import FunctionalProcessor
 
 def test_functional_processor_holds_functions():
     """

@@ -1,6 +1,5 @@
 """Unit tests for the reusable parser functions in the shared framework."""
-import json
-from billing_system.shared.parsers import ParsedAPIGatewayRequest, parse_api_gateway_event, parse_sqs_event, ParsedSQSRecord
+from plummy.parsers import ParsedAPIGatewayRequest, parse_api_gateway_event, parse_sqs_event, ParsedSQSRecord
 
 
 def test_parse_sqs_event_with_valid_record():

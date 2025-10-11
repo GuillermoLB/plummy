@@ -23,7 +23,7 @@ def _mock_pipeline_fixture(mocker) -> MagicMock:
     about how the pipeline was called, isolating the test from the pipeline's
     actual implementation.
     """
-    return mocker.patch("billing_system.application.main.pipeline_start")
+    return mocker.patch("plummy.main.pipeline_start")
 
 @pytest.fixture
 def mock_processor() -> MagicMock:
