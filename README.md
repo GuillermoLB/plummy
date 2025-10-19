@@ -73,7 +73,7 @@ Use StepHandler to create a "step" in your pipeline for each processor. Then, li
 
 ```python
 # your_app/pipeline.py
-from plummy import StepHandler
+from plummy.handlers import StepHandler
 from .processors import order_processor
 # ... import other processors for other steps
 
