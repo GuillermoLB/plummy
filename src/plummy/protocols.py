@@ -17,12 +17,20 @@ DataType = TypeVar("DataType")
 CreateModelType = TypeVar("CreateModelType")
 IdType = TypeVar("IdType")
 
+InputType = TypeVar("InputType")
+OutputType = TypeVar("OutputType")
+
 
 # ==============================================================================
 # 2. Base Repository Protocol (Marker Interface)
 # ==============================================================================
 class Repository(Protocol):
     """A base marker protocol for all repository interfaces."""
+
+    pass
+
+class LLM(Protocol):
+    """A base marker protocol for all LLM interfaces."""
 
     pass
 
@@ -76,6 +84,13 @@ class CRUDRepository(
     """A composite interface for a repository with full CRUD capabilities."""
 
     pass
+
+class CanClassify(LLM, Protocol[InputType, OutputType]):
+    """An interface for a repository that can create data."""
+
+    def classify(self, data: InputType) -> OutputType:
+        ...
+
 
 
 # ==============================================================================
